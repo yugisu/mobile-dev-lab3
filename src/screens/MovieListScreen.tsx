@@ -12,8 +12,8 @@ export const MovieListScreen = () => {
   return (
     <ScrollView>
       <ScreenContainer>
-        <View style={{ paddingHorizontal: 20 }}>
-          <ScreenTitle>Movies List</ScreenTitle>
+        <View style={{ paddingHorizontal: 15 }}>
+          <ScreenTitle>Movies</ScreenTitle>
         </View>
 
         <MovieCardsContainer>
@@ -25,5 +25,5 @@ export const MovieListScreen = () => {
 };
 
 const MovieCardsContainer = styled.View`
-  padding: 10px 0;
+  padding: 10px 15px;
 `;

@@ -1,12 +1,13 @@
 import styled from "styled-components/native";
 
 export const ScreenContainer = styled.View`
-  padding: 40px 0;
+  padding: 50px 0 30px;
 
   background-color: ${(props) => props.theme.app.background};
 `;
 
 export const ScreenTitle = styled.Text`
-  font-size: 20px;
+  color: #444;
+  font-size: 30px;
   font-weight: bold;
 `;

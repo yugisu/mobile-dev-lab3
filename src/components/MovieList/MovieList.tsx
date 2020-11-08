@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components/native";
+import { View } from "react-native";
 
 import type { TMovie } from "types/Movie.type";
 
@@ -11,14 +11,10 @@ type Props = {
 
 export const MovieList = ({ movies }: Props) => {
   return (
-    <Container>
+    <View>
       {movies.map((movie) => (
         <MovieCard movie={movie} />
       ))}
-    </Container>
+    </View>
   );
 };
-
-const Container = styled.View`
-  padding: 0 20px;
-`;

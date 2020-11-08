@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
-import { Text } from "react-native";
+import { Text, View } from "react-native";
 
 import { TMovie } from "types/Movie.type";
 
@@ -11,7 +11,23 @@ type Props = {
 export const MovieCard = ({ movie }: Props) => {
   return (
     <Container>
-      <Text>{movie.title}</Text>
+      <View style={{ paddingBottom: 10 }}>
+        <Title>{movie.title}</Title>
+      </View>
+
+      <View>
+        <Text>
+          Type: {movie.type} | Year: {movie.year}
+        </Text>
+      </View>
+
+      <View>
+        <Text>imDB id: {movie.imdbID}</Text>
+      </View>
+
+      <View>
+        <Text>Poster name: {movie.poster}</Text>
+      </View>
     </Container>
   );
 };
@@ -19,7 +35,11 @@ export const MovieCard = ({ movie }: Props) => {
 const Container = styled.View`
   margin-top: 20px;
 
-  padding: 10px;
+  padding: 5px 10px;
 
   background-color: ${(props) => props.theme.movieCard.background};
+`;
+
+const Title = styled.Text`
+  font-weight: bold;
 `;
