@@ -1,5 +1,5 @@
-import React from "react";
+import { registerRootComponent } from "expo";
 
 import { App } from "components/App";
 
-export const Root = () => <App />;
+registerRootComponent(App);
